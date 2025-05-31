@@ -16,7 +16,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import {ImageBackground} from 'react-native';
 
 const ResetPasswordScreen = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState({});
@@ -44,22 +44,14 @@ const ResetPasswordScreen = () => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={stylesresetpassword.container}>
-        {/* <View style={stylesresetpassword.topSection}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Icon name="arrow-back" size={24} color="#000" />
-        </TouchableOpacity>
-        <Text style={stylesresetpassword.title}>Reset Password</Text>
-      </View> */}
-
         <LinearGradient
-          colors={['#DDF6FF', '#ffffff']}
-          start={{x: 0, y: 0}}
-          end={{x: 0, y: 1}}
+          colors={['#D0F6FD', '#FFFFFF', '#FFFFFF']}
           style={stylesresetpassword.topSection}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <ImageBackground
               source={require('../assest/backsp.png')}
-              style={{height: 14, width: 20}}></ImageBackground>
+              style={{height: 14, width: 20}}
+            />
           </TouchableOpacity>
           <Text style={stylesresetpassword.title}>Reset Password</Text>
 
@@ -69,7 +61,17 @@ const ResetPasswordScreen = () => {
               placeholder="password"
               secureTextEntry
               value={password}
-              onChangeText={setPassword}
+              onChangeText={text => {
+                setPassword(text);
+                setErrors(prev => ({
+                  ...prev,
+                  password: !text
+                    ? 'Password is required'
+                    : text.length < 6
+                    ? 'Min 6 characters'
+                    : null,
+                }));
+              }}
               style={stylesresetpassword.input}
               placeholderTextColor={'#12202580'}
             />
@@ -82,7 +84,17 @@ const ResetPasswordScreen = () => {
               placeholder="confirm password"
               secureTextEntry
               value={confirmPassword}
-              onChangeText={setConfirmPassword}
+              onChangeText={text => {
+                setConfirmPassword(text);
+                setErrors(prev => ({
+                  ...prev,
+                  confirmPassword: !text
+                    ? 'Please confirm password'
+                    : text !== password
+                    ? 'Passwords do not match'
+                    : null,
+                }));
+              }}
               style={stylesresetpassword.input}
             />
             {errors.confirmPassword && (

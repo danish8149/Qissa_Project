@@ -2,42 +2,46 @@ import StyleSheet from 'react-native/Libraries/StyleSheet/StyleSheet';
 const stylesLogin = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#D0F6FD',
   },
   header: {
-    // backgroundColor: '#126782',
     paddingTop: 90,
     paddingHorizontal: 20,
     paddingBottom: 40,
-    // borderBottomLeftRadius: 30,
-    // borderBottomRightRadius: 30,
+  },
+
+  logoContainer: {
+    height: 70,
+    width: 100,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logo: {
-    color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 30,
+    height: 50,
+    width: 100,
   },
   title: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontSize: 35,
     fontWeight: 'bold',
     fontFamily: 'Optima, Bold',
   },
   subtitle: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontSize: 14,
     marginTop: 5,
     fontFamily: 'Rubik, Regular',
-    paddingBottom:20
+    paddingBottom: 10,
   },
   card: {
-    marginTop: -25,
-    backgroundColor: '#D0F6FD',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    padding: 5,
+    marginTop: -15,
     flex: 1,
+  },
+  gradiant: {
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingBottom: 40,
   },
   form: {
     padding: 20,
@@ -65,10 +69,14 @@ const stylesLogin = StyleSheet.create({
   toggleTextActive: {
     color: '#000',
     fontWeight: '700',
+    fontFamily: 'Rubik, SemiBold',
+    fontSize: 15,
   },
   toggleTextInactive: {
-    color: '#666',
-    fontWeight: '600',
+    color: '#12202580',
+    fontWeight: '700',
+    fontFamily: 'Rubik, Medium',
+    fontSize: 15,
   },
   label: {
     fontSize: 15,
@@ -77,10 +85,13 @@ const stylesLogin = StyleSheet.create({
     fontFamily: 'Rubik, Medium',
   },
   input: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#FFFFFF',
     padding: 10,
     borderRadius: 12,
     marginTop: 5,
+    borderWidth: 1,
+    borderColor: '#0391B529',
+    height: 50,
   },
   rememberRow: {
     flexDirection: 'row',
@@ -92,6 +103,11 @@ const stylesLogin = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  checkBox: {
+    borderWidth: 2,
+    borderRadius: 6,
+    borderColor: '#0391B529',
+  },
   rememberText: {
     marginLeft: 5,
     fontSize: 14,
@@ -100,7 +116,7 @@ const stylesLogin = StyleSheet.create({
     fontWeight: 'bold',
   },
   forgotText: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#0391B5',
     fontWeight: 'bold',
     fontFamily: 'Rubik, Medium',
@@ -111,12 +127,28 @@ const stylesLogin = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     borderRadius: 25,
-    elevation: 4,
+    // elevation: 3,
   },
   loginButtonText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 15,
+  },
+  guestButton: {
+    backgroundColor: '#FFFFFF',
+    padding: 14,
+    marginTop: 20,
+    alignItems: 'center',
+    borderRadius: 25,
+    // elevation: 4,
+    borderWidth: 1,
+    borderColor: '#D4D5D5',
+  },
+  guestButtonText: {
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 15,
+    fontFamily: 'Rubik, Medium',
   },
 });
 export default stylesLogin;

@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
 const stylesMyProfile = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#FFFFFF'
+    backgroundColor: '#FFFFFF',
   },
   header: {
     // paddingTop: 50,
@@ -12,11 +12,23 @@ const stylesMyProfile = StyleSheet.create({
     // borderBottomLeftRadius: 20,
     // borderBottomRightRadius: 20,
   },
+  arrowContainer: {
+    // height: 100,
+    // width: '100%',
+  },
+  arrow: {
+    position: 'relative',
+    height: 14,
+    width: 20,
+    right: 150,
+    top: 30,
+  },
   title: {
-    fontSize: 20,
-    fontWeight: '600',
+    fontSize: 15,
+    fontWeight: '700',
     marginTop: 10,
-    color: '#000',
+    color: '#000000',
+    fontFamily: 'Rubik, Medium',
   },
   profileImageContainer: {
     marginTop: 20,
@@ -40,21 +52,24 @@ const stylesMyProfile = StyleSheet.create({
   body: {
     paddingHorizontal: 20,
     marginTop: 30,
-    width:400
+    width: 400,
   },
   label: {
     fontSize: 14,
     marginBottom: 6,
-    color: '#333',
+    color: '#122025',
+    fontFamily:'Rubik, Medium',
+    fontWeight:700
   },
   input: {
     backgroundColor: '#fff',
     borderRadius: 10,
     paddingHorizontal: 15,
     paddingVertical: 12,
-    borderColor: '#ddd',
+    borderColor: '#0391B529',
     borderWidth: 1,
     marginBottom: 20,
+    height: 55,
   },
   saveButton: {
     backgroundColor: '#00ADEF',

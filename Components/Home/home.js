@@ -10,8 +10,10 @@ import {
 } from 'react-native';
 import stylesHome from './home-style';
 import LinearGradient from 'react-native-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   const renderCard = (title, subtitle, image) => (
     <View style={stylesHome.card}>
       <Image
@@ -31,28 +33,30 @@ const HomeScreen = () => {
           <Text style={stylesHome.featuredTitle}>{title}</Text>
         </View>
       </View>
-      <Text style={stylesHome.cardTitle}>{title}</Text>
-      <Text style={stylesHome.cardSubtitle}>{subtitle}</Text>
+      <Text style={stylesHome.feauturedcardTitle}>{title}</Text>
+      <Text style={stylesHome.feauturedcardSubtitle}>{subtitle}</Text>
     </View>
   );
 
   return (
     <View style={stylesHome.wrapper}>
-      <LinearGradient
-        colors={['#D0F6FD', '#FFFFFF']}
-        // start={{ x: 0, y: 0 }}
-        // end={{ x: 0, y: 1 }}
-      >
+      <LinearGradient colors={['#D0F6FD', '#FFFFFF', '#FFFFFF']}>
         <ScrollView contentContainerStyle={stylesHome.scrollContent}>
           <View style={stylesHome.searchBarContainer}>
+            <Image
+              source={require('../assest/logo.png')}
+              style={stylesHome.logo}
+              resizeMode="contain"
+            />
             <ImageBackground
               source={require('../assest/search_2.png')}
-              style={stylesHome.searchBarImg}></ImageBackground>
-            <TextInput
+              style={stylesHome.searchBarImg}
+            />
+            {/* <TextInput
               style={stylesHome.searchBar}
               placeholder="         Search Stories"
               placeholderTextColor="#888"
-            />
+            /> */}
           </View>
 
           <Text style={stylesHome.sectionTitle}>Featured Countries</Text>
@@ -152,47 +156,65 @@ const HomeScreen = () => {
             showsHorizontalScrollIndicator={false}
             style={stylesHome.horizontalScroll}>
             {renderCard(
-              'The Villaggio Mall',
-              'Architecture',
+              'Handcrafted Items',
+              'All are Qatar Products',
               require('../assest/HBI_1.png'),
             )}
             {renderCard(
-              'National Museum',
-              'Architecture',
+              'Arabian Lamps',
+              'All are Qatar Products',
               require('../assest/HBI_2.png'),
             )}
             {renderCard(
               'Traditional Qatari Attire',
-              'Architecture',
+              'All are Qatar Products',
               require('../assest/HBI_3.png'),
             )}
+          </ScrollView>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={stylesHome.horizontalScroll}>
+            {renderCard()}
+            {renderCard()}
+            {renderCard()}
           </ScrollView>
         </ScrollView>
 
         <View style={stylesHome.navBar}>
           <TouchableOpacity style={stylesHome.navCont}>
-            <ImageBackground source={require('../assest/feature.png')}
-            style={{width:20,height:20}}></ImageBackground>
-            <Text style={stylesHome.navItem}>Featured</Text>
+            <Image
+              source={require('../assest/feature.png')}
+              style={stylesHome.navImage}
+            />
+            <Text style={stylesHome.navItem1} >Featured</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesHome.navCont}>
-            <ImageBackground source={require('../assest/discover.png')}
-            style={{width:20,height:20}}></ImageBackground>
+            <Image
+              source={require('../assest/discover.png')}
+              style={stylesHome.navImage}
+            />
             <Text style={stylesHome.navItem}>Discover</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesHome.navCont}>
-            <ImageBackground source={require('../assest/map.png')}
-            style={{width:20,height:20}}></ImageBackground>
+            <Image
+              source={require('../assest/map.png')}
+              style={stylesHome.navImage}
+            />
             <Text style={stylesHome.navItem}>Map</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesHome.navCont}>
-            <ImageBackground source={require('../assest/reels.png')}
-            style={{width:20,height:20}}></ImageBackground>
-            <Text style={stylesHome.navItem}>Reals</Text>
+            <Image
+              source={require('../assest/reels.png')}
+              style={stylesHome.navImage}
+            />
+            <Text style={stylesHome.navItem}>Reels</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={stylesHome.navCont}>
-            <ImageBackground source={require('../assest/account.png')}
-            style={{width:20,height:20}}></ImageBackground>
+          <TouchableOpacity style={stylesHome.navCont} onPress={navigation.navigate('MyProfile')}>
+            <Image
+              source={require('../assest/account.png')}
+              style={stylesHome.navImage}
+            />
             <Text style={stylesHome.navItem}>Account</Text>
           </TouchableOpacity>
         </View>

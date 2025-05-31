@@ -4,21 +4,30 @@ const stylesHome = StyleSheet.create({
     flex: 1,
   },
   scrollContent: {
-    padding: 10,
-    paddingBottom: 80,
+    // padding: 10,
+    paddingLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    // paddingBottom: 80,
   },
   searchBarContainer: {
     marginBottom: 15,
     // marginTop: 5,
-    // backgroundColor: 'green',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    // alignItems: 'center',
+  },
+  logo: {
+    // marginBottom: 10,
+    height: 50,
+    width: 100,
   },
   searchBarImg: {
     height: 22,
     width: 22,
-    position: 'relative',
-    top: 36,
-    left: 10,
-    zIndex: 1,
+    top: 20,
+    right: 20,
   },
   searchBar: {
     backgroundColor: '#fff',
@@ -32,42 +41,43 @@ const stylesHome = StyleSheet.create({
     height: 50,
   },
   sectionTitle: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
     marginVertical: 10,
-    color: '#000',
+    color: '#122025',
   },
   horizontalScroll: {
     marginBottom: 10,
   },
   card: {
     marginRight: 15,
-    width: 140,
+    width: 160,
     height: 170,
   },
   image: {
     width: '100%',
     height: 130,
-    borderRadius: 12,
+    borderRadius: 16,
     resizeMode: 'cover',
   },
   cardTitle: {
     fontSize: 14,
     fontWeight: 'bold',
     marginTop: 5,
-    color: '#000',
+    color: '#122025',
+    fontFamily: 'Rubik, Medium',
   },
   cardSubtitle: {
     fontSize: 12,
-    color: '#888',
+    color: '#12202580',
+    fontFamily: 'Rubik, Regular',
   },
+
   navBar: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingVertical: 12,
+    alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    // borderTopLeftRadius: 20,
-    // borderTopRightRadius: 20,
     position: 'absolute',
     bottom: 0,
     left: 0,
@@ -77,26 +87,45 @@ const stylesHome = StyleSheet.create({
     shadowOffset: {width: 0, height: -2},
     shadowOpacity: 0.1,
     shadowRadius: 5,
-    height:60,
+    height: 80,
+    paddingHorizontal: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#12202580',
   },
+
   navCont: {
-    flexDirection: 'column',
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor:'yellow',
-    height:50
   },
+
+  navImage: {
+    width: 26,
+    height: 26,
+    marginBottom: 5,
+    resizeMode: 'contain',
+  },
+
   navItem: {
     fontSize: 12,
     fontWeight: '700',
     color: '#12202580',
+    fontFamily: 'Rubik, Medium',
   },
+  navItem1: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#0391B5',
+    fontFamily: 'Rubik, Medium',
+  },
+
   /////////// Countries ///////////
 
   featuredCard: {
     marginRight: 15,
-    width: 140,
-    height: 170,
+    width: 180,
+    height: 180,
+    borderRadius: 16,
   },
   featuredImageWrapper: {
     width: '100%',
@@ -125,16 +154,18 @@ const stylesHome = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'Times New Roman, Bold',
   },
-  cardTitle: {
+  feauturedcardTitle: {
     fontSize: 14,
     fontWeight: 'bold',
     marginTop: 5,
     fontFamily: 'Rubik, Medium',
+    color: '#122025',
   },
-  cardSubtitle: {
+  feauturedcardSubtitle: {
     fontSize: 12,
-    color: '#888',
+    color: '#12202580',
     fontFamily: 'Rubik, Regular',
   },
 });

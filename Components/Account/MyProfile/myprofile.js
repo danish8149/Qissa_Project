@@ -8,6 +8,7 @@ import {
   Image,
   Alert,
   Keyboard,
+  ImageBackground,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -16,7 +17,7 @@ import {useNavigation} from '@react-navigation/native';
 import stylesMyProfile from './myprofile-style';
 
 const MyProfileScreen = () => {
-  //   const navigation = useNavigation();
+  const navigation = useNavigation();
   const [name, setName] = useState('Mohammad Zubair');
   const [email, setEmail] = useState('zubair.mohammad@gmail.com');
   const [photo, setPhoto] = useState(null);
@@ -35,7 +36,7 @@ const MyProfileScreen = () => {
       Alert.alert('Validation Error', 'All fields are required.');
       return;
     }
-    // You can post this data to your backend
+
     Alert.alert('Success', 'Profile updated successfully!');
   };
 
@@ -47,12 +48,15 @@ const MyProfileScreen = () => {
           // start={{ x: 0, y: 0 }}
           // end={{ x: 0, y: 1 }}
           style={stylesMyProfile.header}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            {/* <ImageBackground
-              source={require('../assest/check_circle.png')}
-              style={{height: 20, width: 20}}></ImageBackground> */}
-          </TouchableOpacity>
-          <Text style={stylesMyProfile.title}>My Profile</Text>
+          <View style={stylesMyProfile.arrowContainer}>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <ImageBackground
+                source={require('../../assest/backsp.png')}
+                style={stylesMyProfile.arrow}
+              />
+            </TouchableOpacity>
+            <Text style={stylesMyProfile.title}>My Profile</Text>
+          </View>
 
           <View style={stylesMyProfile.profileImageContainer}>
             <Image
@@ -74,6 +78,7 @@ const MyProfileScreen = () => {
               style={stylesMyProfile.input}
               value={name}
               onChangeText={setName}
+              placeholderTextColor={'#122025'}
             />
 
             <Text style={stylesMyProfile.label}>Email</Text>
@@ -84,11 +89,11 @@ const MyProfileScreen = () => {
               keyboardType="email-address"
             />
 
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={stylesMyProfile.saveButton}
               onPress={handleSave}>
               <Text style={stylesMyProfile.saveText}>Save</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </LinearGradient>
       </View>

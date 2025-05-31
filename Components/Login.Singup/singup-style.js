@@ -42,53 +42,60 @@ const stylesSingup = StyleSheet.create({
   //   paddingVertical: 10,
   //   alignItems: 'center',
   // },
-  activeTab: {
-    backgroundColor: '#fff',
-  },
-  inactiveTab: {
-    backgroundColor: '#d6f2f9',
-  },
-  tabText: {
-    fontWeight: '600',
-    color: '#04354b',
-  },
-  activeTabText: {
-    color: '#04354b',
-  },
-  inactiveTabText: {
-    color: '#999',
-  },
+  // activeTab: {
+  //   backgroundColor: '#FFFFFF',
+  // },
+  // inactiveTab: {
+  //   backgroundColor: '#0000000D',
+  // },
+  // tabText: {
+  //   fontWeight: '600',
+  //   color: '#04354b',
+  // },
+  // activeTabText: {
+  //   color: '#000',
+  //   fontWeight: '700',
+  //   fontFamily: 'Rubik, SemiBold',
+  //   fontSize: 15,
+  // },
+  // inactiveTabText: {
+  //  color: '#12202580',
+  //   fontWeight: '700',
+  //   fontFamily: 'Rubik, Medium',
+  //   fontSize: 15,
+  // },
   form: {
-    marginTop: 10,
+    // marginTop: 5,
   },
   label: {
     fontSize: 15,
     fontWeight: 'bold',
     marginTop: 10,
     fontFamily: 'Rubik, Medium',
+    color: '#122025',
   },
   input: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#FFFFFF',
     padding: 10,
     borderRadius: 12,
     marginTop: 5,
+    borderWidth: 1,
+    borderColor: '#0391B529',
+    height: 50,
   },
   signupBtn: {
-    marginTop: 24,
     backgroundColor: '#007ea7',
-    paddingVertical: 12,
-    borderRadius: 25,
+    padding: 14,
+    marginTop: 20,
     alignItems: 'center',
-    shadowColor: '#009ecf',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 3,
+    borderRadius: 25,
+    // elevation: 3,
   },
   signupBtnText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 15,
+    fontFamily: 'Rubik, SemiBold',
   },
 });
 export default stylesSingup;

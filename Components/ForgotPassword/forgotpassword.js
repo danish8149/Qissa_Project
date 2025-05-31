@@ -16,7 +16,7 @@ import {useNavigation} from '@react-navigation/native';
 import stylesForgotPassword from './forgotpassword-style';
 
 const ForgotPasswordScreen = () => {
-  //   const navigation = useNavigation();
+  const navigation = useNavigation();
   const [email, setEmail] = useState('');
 
   const validateEmail = email => {
@@ -25,26 +25,23 @@ const ForgotPasswordScreen = () => {
   };
 
   const handleSend = () => {
-    if (!email) {
-      Alert.alert('Error', 'Email is required');
-    } else if (!validateEmail(email)) {
-      Alert.alert('Error', 'Enter a valid email address');
-    } else {
-      // Call your API or navigate
-      Alert.alert('Success', 'Verification code sent to your email');
-    }
+    // if (!email) {
+    //   Alert.alert('Error', 'Email is required');
+    // } else if (!validateEmail(email)) {
+    //   Alert.alert('Error', 'Enter a valid email address');
+    // } else {
+    //   Alert.alert('Success', 'Verification code sent to your email');
+    // }
+    navigation.navigate('VerificationCode');
   };
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={stylesForgotPassword.container}>
         <LinearGradient
-          colors={['#DDF6FF', '#ffffff']}
-          start={{x: 0, y: 0}}
-          end={{x: 0, y: 1}}
+          colors={['#D0F6FD', '#FFFFFF', '#FFFFFF']}
           style={stylesForgotPassword.header}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            {/* <Icon name="arrow-back" size={24} color="#000" /> */}
             <ImageBackground
               source={require('../assest/backsp.png')}
               style={{height: 14, width: 20}}></ImageBackground>

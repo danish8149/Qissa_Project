@@ -4,25 +4,26 @@ const stylesresetpassword = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-    topSection: {
-      backgroundColor: '#DDF6FF',
-      paddingTop: 50,
-      paddingBottom: 30,
-      paddingHorizontal: 20,
-    },
-//   topSection: {
-//     paddingTop: 50,
-//     paddingBottom: 30,
-//     paddingHorizontal: 20,
-//     borderBottomLeftRadius: 20,
-//     borderBottomRightRadius: 20,
-//   },
+  topSection: {
+    backgroundColor: '#DDF6FF',
+    paddingTop: 50,
+    paddingBottom: 30,
+    paddingHorizontal: 20,
+    flex: 1,
+  },
+  //   topSection: {
+  //     paddingTop: 50,
+  //     paddingBottom: 30,
+  //     paddingHorizontal: 20,
+  //     borderBottomLeftRadius: 20,
+  //     borderBottomRightRadius: 20,
+  //   },
   title: {
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: '700',
     marginTop: 20,
-    color: '#000',
-    fontFamily:'Optima, Bold'
+    color: '#122025',
+    fontFamily: 'Optima, Bold',
   },
   form: {
     paddingTop: 50,
@@ -31,19 +32,20 @@ const stylesresetpassword = StyleSheet.create({
     fontSize: 15,
     fontWeight: '700',
     marginBottom: 5,
-    color: '#000',
-    fontFamily:'Rubik, Medium'
+    color: '#122025',
+    fontFamily: 'Rubik, Medium',
   },
   input: {
-    backgroundColor: '#f6fafe',
+    backgroundColor: '#FFFFFF',
     borderRadius: 12,
     paddingVertical: 12,
     paddingHorizontal: 15,
     fontSize: 16,
     marginBottom: 10,
     borderWidth: 1,
-    borderColor:'#0391B529',
-    width:350
+    borderColor: '#0391B529',
+    width: '100%',
+    height: 55,
   },
   error: {
     color: 'red',
@@ -58,10 +60,10 @@ const stylesresetpassword = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontWeight: '700',
-    fontSize: 16,
-    fontFamily:'Rubik, SemiBold'
+    fontSize: 15,
+    fontFamily: 'Rubik, SemiBold',
   },
 });
 

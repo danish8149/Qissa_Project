@@ -12,7 +12,7 @@ const stylesForgotPassword = StyleSheet.create({
     borderBottomRightRadius: 20,
   },
   title: {
-    fontSize: 28,
+    fontSize: 35,
     fontWeight: 'bold',
     color: '#122025',
     marginTop: 15,
@@ -33,7 +33,7 @@ const stylesForgotPassword = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
     marginBottom: 8,
-    color: '#000',
+    color: '#000000',
     fontFamily: 'Rubik, Medium',
   },
   input: {
@@ -57,7 +57,7 @@ const stylesForgotPassword = StyleSheet.create({
     elevation: 3,
   },
   buttonText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: 16,
     fontFamily: 'Rubik, SemiBold',

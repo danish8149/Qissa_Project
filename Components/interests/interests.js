@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, {useState} from 'react';
 import {
   View,
@@ -9,7 +10,7 @@ import {
   Pressable,
   ImageBackground,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import LinearGradient from 'react-native-linear-gradient';
 
 const interests = [
   {
@@ -36,6 +37,17 @@ const interests = [
 
 const InterestScreen = () => {
   const [selected, setSelected] = useState([]);
+   const navigation = useNavigation();
+  
+    const handlePress = () => {
+      navigation.navigate('Login');
+    };
+    const handleSkip = () => {
+      navigation.navigate('Home');
+    };
+    const handleNext = () => {
+      navigation.navigate('Subscription');
+    };
 
   const toggleSelect = id => {
     setSelected(prev =>
@@ -52,10 +64,10 @@ const InterestScreen = () => {
         <Image source={item.image} style={styles.image} />
         {isSelected && (
           <View style={styles.checkIcon}>
-            {/* <Icon name="checkmark" size={20} color="#fff" /> */}
             <ImageBackground
               source={require('../assest/check_circle.png')}
-              style={{height: 20, width: 20}}></ImageBackground>
+              style={{height: 20, width: 20}}
+            />
           </View>
         )}
         <View style={styles.overlay}>
@@ -66,13 +78,17 @@ const InterestScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={['#D9F2FB', '#ffffff']}
+      style={styles.container}
+      start={{x: 0.5, y: 0}}
+      end={{x: 0.5, y: 1}}>
       <View style={styles.header}>
-        <Pressable>
-          {/* <Icon name="arrow-back" size={24} color="#000" /> */}
+        <Pressable onPress={handlePress}>
           <ImageBackground
             source={require('../assest/backsp.png')}
-            style={{height: 14, width: 20}}></ImageBackground>
+            style={{height: 14, width: 20}}
+          />
         </Pressable>
         <Text style={styles.title}>Which area interests you the most?</Text>
         <Text style={styles.subtitle}>
@@ -91,14 +107,14 @@ const InterestScreen = () => {
       />
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.skipBtn}>
+        <TouchableOpacity style={styles.skipBtn} onPress={handleSkip}>
           <Text style={styles.skipText}>Skip</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.nextBtn}>
+        <TouchableOpacity style={styles.nextBtn} onPress={handleNext}>
           <Text style={styles.nextText}>Next</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -107,7 +123,6 @@ export default InterestScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E4F9FF',
     paddingHorizontal: 20,
     paddingTop: 50,
   },
@@ -152,14 +167,15 @@ const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     paddingBottom: 8,
+    paddingLeft:8,
     backgroundColor: 'rgba(0,0,0,0.25)',
   },
   cardText: {
     color: '#fff',
     fontWeight: '700',
-    fontSize: 16,
+    fontSize: 18,
     fontFamily: 'Rubik, Medium',
   },
   checkIcon: {
@@ -184,6 +200,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 30,
     alignItems: 'center',
+    backgroundColor:'#FFFFFF'
   },
   nextBtn: {
     flex: 1,
@@ -192,6 +209,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 30,
     alignItems: 'center',
+    shadowColor:'#00000029',
   },
   skipText: {
     color: '#000',
@@ -202,3 +220,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+

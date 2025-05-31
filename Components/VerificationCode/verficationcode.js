@@ -16,12 +16,11 @@ import {useNavigation} from '@react-navigation/native';
 import stylesVerificationCode from './verificationcode-style';
 
 const VerificationCodeScreen = () => {
-  //   const navigation = useNavigation();
+  const navigation = useNavigation();
   const [code, setCode] = useState(['', '', '', '']);
   const inputs = useRef([]);
   const [timer, setTimer] = useState(30);
 
-  // Countdown logic
   useEffect(() => {
     if (timer === 0) return;
     const interval = setInterval(() => setTimer(prev => prev - 1), 1000);
@@ -39,22 +38,20 @@ const VerificationCodeScreen = () => {
   };
 
   const handleVerify = () => {
-    if (code.some(char => char === '')) {
-      Alert.alert('Error', 'Please enter the complete 4-digit code.');
-    } else {
-      const finalCode = code.join('');
-      // Call verify API or next step
-      Alert.alert('Success', `Code entered: ${finalCode}`);
-    }
+    // if (code.some(char => char === '')) {
+    //   Alert.alert('Error', 'Please enter the complete 4-digit code.');
+    // } else {
+    //   const finalCode = code.join('');
+    //   Alert.alert('Success', `Code entered: ${finalCode}`);
+    // }
+    navigation.navigate('ResetPassword');
   };
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={stylesVerificationCode.container}>
         <LinearGradient
-          colors={['#DDF6FF', '#ffffff']}
-          start={{x: 0, y: 0}}
-          end={{x: 0, y: 1}}
+          colors={['#D0F6FD', '#FFFFFF', '#FFFFFF']}
           style={stylesVerificationCode.header}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <ImageBackground
@@ -87,9 +84,27 @@ const VerificationCodeScreen = () => {
               <Text style={stylesVerificationCode.buttonText}>Verify</Text>
             </TouchableOpacity>
 
-            <Text style={stylesVerificationCode.resendText}>
+            {/* <Text style={stylesVerificationCode.resendText}>
               Resend in {timer < 10 ? `0:0${timer}` : `0:${timer}`}
-            </Text>
+            </Text> */}
+            <TouchableOpacity
+              onPress={() => {
+                if (timer === 0) {
+                  setTimer(30);
+                  Alert.alert('Info', 'Verification code resent.');
+                }
+              }}
+              disabled={timer !== 0}>
+              <Text
+                style={[
+                  stylesVerificationCode.resendText,
+                  {color: timer === 0 ? '#12202580' : '#aaa'},
+                ]}>
+                {timer === 0
+                  ? 'Resend Code'
+                  : `Resend in ${timer < 10 ? `0:0${timer}` : `0:${timer}`}`}
+              </Text>
+            </TouchableOpacity>
           </View>
         </LinearGradient>
       </View>

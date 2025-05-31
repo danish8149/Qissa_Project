@@ -8,18 +8,17 @@ const stylesVerificationCode = StyleSheet.create({
     paddingTop: 50,
     paddingBottom: 30,
     paddingHorizontal: 20,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    flex: 1,
   },
   title: {
-    fontSize: 28,
+    fontSize: 35,
     fontWeight: 'bold',
     color: '#122025',
     marginTop: 15,
     fontFamily: 'Optima, Bold',
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 15,
     color: '#122025BF',
     marginTop: 5,
     fontFamily: 'Rubik, Regular',
@@ -32,7 +31,7 @@ const stylesVerificationCode = StyleSheet.create({
   codeContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    gap: 10,
+    gap: 25,
     marginBottom: 30,
   },
   codeInput: {
@@ -43,7 +42,7 @@ const stylesVerificationCode = StyleSheet.create({
     borderWidth: 1,
     textAlign: 'center',
     fontSize: 24,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
   },
   button: {
     backgroundColor: '#0391B5',
@@ -52,11 +51,12 @@ const stylesVerificationCode = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     elevation: 3,
+    width:'100%'
   },
   buttonText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 15,
   },
   resendText: {
     marginTop: 20,
