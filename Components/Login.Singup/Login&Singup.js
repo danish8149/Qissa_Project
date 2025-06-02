@@ -73,13 +73,13 @@ const LoginScreen = () => {
           keyboardShouldPersistTaps="handled">
           <View style={stylesLogin.container}>
             <ImageBackground
-              source={require('../assest/login.png')}
+              source={require('../assets/LoginSignupImage.png')}
               style={stylesLogin.header}
               resizeMode="cover"
               blurRadius={31}>
               <View style={stylesLogin.logoContainer}>
                 <Image
-                  source={require('../assest/logo.png')}
+                  source={require('../assets/logo.png')}
                   style={stylesLogin.logo}
                   resizeMode="contain"
                 />
@@ -172,12 +172,7 @@ const LoginScreen = () => {
                       )}
                       <View style={stylesLogin.rememberRow}>
                         <View style={stylesLogin.checkboxRow}>
-                          <CheckBox
-                            style={stylesLogin.checkBox}
-                            value={isChecked}
-                            onValueChange={setIsChecked}
-                            tintColors={{true: '#0391B5', false: '#0391B529'}}
-                          />
+                          
                           <Text style={stylesLogin.rememberText}>
                             Remember Me
                           </Text>
@@ -252,7 +247,7 @@ const LoginScreen = () => {
                         </Text>
                       )}
                       <TouchableOpacity
-                        style={stylesSingup.signupBtn}
+                        style={stylesSingup.signupBtn }
                         onPress={handleSignup}>
                         <Text style={stylesSingup.signupBtnText}>Sign Up</Text>
                       </TouchableOpacity>

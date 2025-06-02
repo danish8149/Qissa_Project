@@ -44,12 +44,12 @@ const HomeScreen = () => {
         <ScrollView contentContainerStyle={stylesHome.scrollContent}>
           <View style={stylesHome.searchBarContainer}>
             <Image
-              source={require('../assest/logo.png')}
+              source={require('../assets/qassa_color.png')}
               style={stylesHome.logo}
               resizeMode="contain"
             />
             <ImageBackground
-              source={require('../assest/search_2.png')}
+              source={require('../assets/search_2.png')}
               style={stylesHome.searchBarImg}
             />
             {/* <TextInput
@@ -67,22 +67,22 @@ const HomeScreen = () => {
             {renderFeaturedCard(
               'Qatar',
               'Qissa Guide',
-              require('../assest/Qatar.png'),
+              require('../assets/Qatar.png'),
             )}
             {renderFeaturedCard(
               'Saudi Arabia',
               'Qissa Guide',
-              require('../assest/Saudi_Arabia.png'),
+              require('../assets/Saudi_Arabia.png'),
             )}
             {renderFeaturedCard(
               'Oman',
               'Qissa Guide',
-              require('../assest/Oman.png'),
+              require('../assets/Oman.png'),
             )}
             {renderFeaturedCard(
               'Egypt',
               'Qissa Guide',
-              require('../assest/Egypt.png'),
+              require('../assets/Egypt.png'),
             )}
           </ScrollView>
 
@@ -94,17 +94,17 @@ const HomeScreen = () => {
             {renderCard(
               'Zekreet Fort',
               'Historical Place',
-              require('../assest/zekreet_fort.png'),
+              require('../assets/zekreet_fort.png'),
             )}
             {renderCard(
               'Bin Jelmood House',
               'Historical Place',
-              require('../assest/Bin_Jelmood_House.png'),
+              require('../assets/Bin_Jelmood_House.png'),
             )}
             {renderCard(
               'Traditional Foods',
               'Foods',
-              require('../assest/Traditiional_Foods.png'),
+              require('../assets/Traditiional_Foods.png'),
             )}
           </ScrollView>
 
@@ -116,17 +116,17 @@ const HomeScreen = () => {
             {renderCard(
               'Ahmad Bin Ali Stadium',
               'FIFA Stadium',
-              require('../assest/Ahmad_Bin_Ali_Stadium.png'),
+              require('../assets/Ahmad_Bin_Ali_Stadium.png'),
             )}
             {renderCard(
               'Qatar Islamic Cultural.',
               'Cultural Center',
-              require('../assest/Qatar_Islamic_Cultural.png'),
+              require('../assets/Qatar_Islamic_Cultural.png'),
             )}
             {renderCard(
               'Lusail Stadium',
               'FIFA Stadium',
-              require('../assest/Lusail_Stadium.png'),
+              require('../assets/Lusail_Stadium.png'),
             )}
           </ScrollView>
           <Text style={stylesHome.sectionTitle}>My Playlist</Text>
@@ -137,17 +137,17 @@ const HomeScreen = () => {
             {renderCard(
               'The Villaggio Mall',
               'Architecture',
-              require('../assest/The_Villaggio_Mall.png'),
+              require('../assets/The_Villaggio_Mall.png'),
             )}
             {renderCard(
               'National Museum',
               'Architecture',
-              require('../assest/National_Musium.png'),
+              require('../assets/National_Musium.png'),
             )}
             {renderCard(
               'Traditional Qatari Attire',
               'Architecture',
-              require('../assest/Traditional_Attire.png'),
+              require('../assets/Traditional_Attire.png'),
             )}
           </ScrollView>
           <Text style={stylesHome.sectionTitle}>History Behind The Items</Text>
@@ -158,17 +158,17 @@ const HomeScreen = () => {
             {renderCard(
               'Handcrafted Items',
               'All are Qatar Products',
-              require('../assest/HBI_1.png'),
+              require('../assets/HBI_1.png'),
             )}
             {renderCard(
               'Arabian Lamps',
               'All are Qatar Products',
-              require('../assest/HBI_2.png'),
+              require('../assets/HBI_2.png'),
             )}
             {renderCard(
               'Traditional Qatari Attire',
               'All are Qatar Products',
-              require('../assest/HBI_3.png'),
+              require('../assets/HBI_3.png'),
             )}
           </ScrollView>
           <ScrollView
@@ -184,35 +184,35 @@ const HomeScreen = () => {
         <View style={stylesHome.navBar}>
           <TouchableOpacity style={stylesHome.navCont}>
             <Image
-              source={require('../assest/feature.png')}
+              source={require('../assets/feature.png')}
               style={stylesHome.navImage}
             />
             <Text style={stylesHome.navItem1} >Featured</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesHome.navCont}>
             <Image
-              source={require('../assest/discover.png')}
+              source={require('../assets/discover.png')}
               style={stylesHome.navImage}
             />
             <Text style={stylesHome.navItem}>Discover</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesHome.navCont}>
             <Image
-              source={require('../assest/map.png')}
+              source={require('../assets/map.png')}
               style={stylesHome.navImage}
             />
             <Text style={stylesHome.navItem}>Map</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesHome.navCont}>
             <Image
-              source={require('../assest/reels.png')}
+              source={require('../assets/reels.png')}
               style={stylesHome.navImage}
             />
             <Text style={stylesHome.navItem}>Reels</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={stylesHome.navCont} onPress={navigation.navigate('MyProfile')}>
+          <TouchableOpacity style={stylesHome.navCont} onPress={()=>navigation.navigate('MyProfile')}>
             <Image
-              source={require('../assest/account.png')}
+              source={require('../assets/account.png')}
               style={stylesHome.navImage}
             />
             <Text style={stylesHome.navItem}>Account</Text>

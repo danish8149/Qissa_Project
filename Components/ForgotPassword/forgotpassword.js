@@ -37,13 +37,16 @@ const ForgotPasswordScreen = () => {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={stylesForgotPassword.container}>
         <LinearGradient
           colors={['#D0F6FD', '#FFFFFF', '#FFFFFF']}
+         style={stylesForgotPassword.container}
+          >
+            <View 
           style={stylesForgotPassword.header}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.goBack()}
+       >
             <ImageBackground
-              source={require('../assest/backsp.png')}
+              source={require('../assets/backsp.png')}
               style={{height: 14, width: 20}}></ImageBackground>
           </TouchableOpacity>
           <Text style={stylesForgotPassword.title}>Forgot Password</Text>
@@ -74,8 +77,8 @@ const ForgotPasswordScreen = () => {
               <Text style={stylesForgotPassword.backLogin}>Back to Login</Text>
             </TouchableOpacity>
           </View>
+          </View>
         </LinearGradient>
-      </View>
     </TouchableWithoutFeedback>
   );
 };

@@ -51,7 +51,7 @@ const MyProfileScreen = () => {
           <View style={stylesMyProfile.arrowContainer}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <ImageBackground
-                source={require('../../assest/backsp.png')}
+                source={require('../../assets/backsp.png')}
                 style={stylesMyProfile.arrow}
               />
             </TouchableOpacity>
@@ -61,7 +61,7 @@ const MyProfileScreen = () => {
           <View style={stylesMyProfile.profileImageContainer}>
             <Image
               source={
-                photo ? {uri: photo} : require('../../assest/food.png') // fallback image
+                photo ? {uri: photo} : require('../../assets/food.png') // fallback image
               }
               style={stylesMyProfile.profileImage}
             />

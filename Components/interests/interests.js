@@ -16,22 +16,22 @@ const interests = [
   {
     id: '1',
     title: 'Historical',
-    image: require('../assest/history.png'),
+    image: require('../assets/history.png'),
   },
   {
     id: '2',
     title: 'Art & Culture',
-    image: require('../assest/arts.culture.png'),
+    image: require('../assets/arts.culture.png'),
   },
   {
     id: '3',
     title: 'Foods',
-    image: require('../assest/food.png'),
+    image: require('../assets/food.png'),
   },
   {
     id: '4',
     title: 'Architecture',
-    image: require('../assest/architecture.png'),
+    image: require('../assets/architecture.png'),
   },
 ];
 
@@ -65,7 +65,7 @@ const InterestScreen = () => {
         {isSelected && (
           <View style={styles.checkIcon}>
             <ImageBackground
-              source={require('../assest/check_circle.png')}
+              source={require('../assets/check_circle.png')}
               style={{height: 20, width: 20}}
             />
           </View>
@@ -86,7 +86,7 @@ const InterestScreen = () => {
       <View style={styles.header}>
         <Pressable onPress={handlePress}>
           <ImageBackground
-            source={require('../assest/backsp.png')}
+            source={require('../assets/backsp.png')}
             style={{height: 14, width: 20}}
           />
         </Pressable>

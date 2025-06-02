@@ -55,7 +55,7 @@ const VerificationCodeScreen = () => {
           style={stylesVerificationCode.header}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <ImageBackground
-              source={require('../assest/backsp.png')}
+              source={require('../assets/backsp.png')}
               style={{height: 14, width: 20}}></ImageBackground>
           </TouchableOpacity>
           <Text style={stylesVerificationCode.title}>Verification Code</Text>

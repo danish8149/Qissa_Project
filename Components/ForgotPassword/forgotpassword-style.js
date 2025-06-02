@@ -5,6 +5,7 @@ const stylesForgotPassword = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
+    flex:1,
     paddingTop: 50,
     paddingBottom: 30,
     paddingHorizontal: 20,
@@ -13,16 +14,15 @@ const stylesForgotPassword = StyleSheet.create({
   },
   title: {
     fontSize: 35,
-    fontWeight: 'bold',
     color: '#122025',
     marginTop: 15,
-    fontFamily: 'Optima, Bold',
+    fontFamily: 'Optima-Bold',
   },
   subtitle: {
     fontSize: 15,
     color: '#122025BF',
     marginTop: 5,
-    fontFamily: 'Rubik, Regular',
+    fontFamily: 'Rubik-Regular',
     fontWeight: 600,
   },
   body: {

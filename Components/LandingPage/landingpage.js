@@ -26,11 +26,11 @@ const LandingPage = () => {
 
   return (
     <ImageBackground
-      source={require('../assest/landing.png')}
+      source={require('../assets/landing.png')}
       style={styles.container}
       resizeMode="cover">
       <LinearGradient
-        colors={['transparent', '#0391B5', '#0391B5', '#0391B5']}
+        colors={['#00627B00', '#0391B5', '#0391B5']}
         style={styles.gradient}
       />
 
@@ -38,7 +38,7 @@ const LandingPage = () => {
         {/* <Text style={styles.logo}>Qissa</Text> */}
         <View style={styles.logo}>
           <ImageBackground
-            source={require('../assest/logo.png')}
+            source={require('../assets/logo.png')}
             // resizeMode='cover'
             style={styles.logoimage}></ImageBackground>
         </View>

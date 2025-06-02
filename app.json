@@ -1,4 +1,7 @@
 {
   "name": "newapp",
-  "displayName": "newapp"
+  "displayName": "newapp",
+  "plugins": [
+    "expo-font"
+  ]
 }

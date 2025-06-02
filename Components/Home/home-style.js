@@ -11,6 +11,7 @@ const stylesHome = StyleSheet.create({
     // paddingBottom: 80,
   },
   searchBarContainer: {
+    marginTop:20,
     marginBottom: 15,
     // marginTop: 5,
     display: 'flex',
@@ -21,7 +22,7 @@ const stylesHome = StyleSheet.create({
   logo: {
     // marginBottom: 10,
     height: 50,
-    width: 100,
+    width: 90,
   },
   searchBarImg: {
     height: 22,
@@ -50,13 +51,13 @@ const stylesHome = StyleSheet.create({
     marginBottom: 10,
   },
   card: {
-    marginRight: 15,
+    marginRight: 10,
     width: 160,
-    height: 170,
+    height: 200,
   },
   image: {
-    width: '100%',
-    height: 130,
+    width: 160,
+    height: 160,
     borderRadius: 16,
     resizeMode: 'cover',
   },
@@ -89,7 +90,7 @@ const stylesHome = StyleSheet.create({
     shadowRadius: 5,
     height: 80,
     paddingHorizontal: 10,
-    borderTopWidth: 1,
+    borderTopWidth: 0.5,
     borderTopColor: '#12202580',
   },
 
@@ -122,14 +123,14 @@ const stylesHome = StyleSheet.create({
   /////////// Countries ///////////
 
   featuredCard: {
-    marginRight: 15,
+    marginRight: 10,
     width: 180,
-    height: 180,
+    height: 220,
     borderRadius: 16,
   },
   featuredImageWrapper: {
-    width: '100%',
-    height: 130,
+    width: 180,
+    height: 180,
     borderRadius: 12,
     overflow: 'hidden',
     position: 'relative',

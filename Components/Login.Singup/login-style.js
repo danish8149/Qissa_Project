@@ -2,11 +2,15 @@ import StyleSheet from 'react-native/Libraries/StyleSheet/StyleSheet';
 const stylesLogin = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:'#FFFFFFF',
+    height:'100%'
+
   },
   header: {
     paddingTop: 90,
     paddingHorizontal: 20,
-    paddingBottom: 40,
+   paddingBottom: 40,
+    
   },
 
   logoContainer: {
@@ -15,6 +19,7 @@ const stylesLogin = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+
   },
   logo: {
     marginBottom: 30,
@@ -24,27 +29,29 @@ const stylesLogin = StyleSheet.create({
   title: {
     color: '#FFFFFF',
     fontSize: 35,
-    fontWeight: 'bold',
-    fontFamily: 'Optima, Bold',
+    fontFamily: 'Optima-bold',
   },
   subtitle: {
     color: '#FFFFFF',
     fontSize: 14,
     marginTop: 5,
-    fontFamily: 'Rubik, Regular',
-    paddingBottom: 10,
+    fontFamily: 'Rubik-Regular',
+    paddingBottom: 15,
   },
+ 
   card: {
     marginTop: -15,
     flex: 1,
+   
   },
+ 
   gradiant: {
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    paddingBottom: 40,
+   borderRadius: 20,
+    height: '100%',
   },
-  form: {
+    form: {
     padding: 20,
+    
   },
   toggleButtons: {
     flexDirection: 'row',
@@ -67,22 +74,19 @@ const stylesLogin = StyleSheet.create({
     alignItems: 'center',
   },
   toggleTextActive: {
-    color: '#000',
-    fontWeight: '700',
-    fontFamily: 'Rubik, SemiBold',
+    color: '#00627B000',
+    fontFamily: 'Rubik-SemiBold',
     fontSize: 15,
   },
   toggleTextInactive: {
     color: '#12202580',
-    fontWeight: '700',
-    fontFamily: 'Rubik, Medium',
+    fontFamily: 'Rubik-Medium',
     fontSize: 15,
   },
   label: {
     fontSize: 15,
-    fontWeight: 'bold',
-    marginTop: 10,
-    fontFamily: 'Rubik, Medium',
+    marginTop: 15,
+   fontFamily: 'Rubik-Medium',
   },
   input: {
     backgroundColor: '#FFFFFF',
@@ -91,13 +95,13 @@ const stylesLogin = StyleSheet.create({
     marginTop: 5,
     borderWidth: 1,
     borderColor: '#0391B529',
-    height: 50,
+    height: 55,
   },
   rememberRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 20,
   },
   checkboxRow: {
     flexDirection: 'row',
@@ -111,44 +115,51 @@ const stylesLogin = StyleSheet.create({
   rememberText: {
     marginLeft: 5,
     fontSize: 14,
-    fontFamily: 'Rubik, Regular',
+    fontFamily: 'Rubik-Regular',
     color: '#12202580',
-    fontWeight: 'bold',
   },
   forgotText: {
     fontSize: 14,
     color: '#0391B5',
-    fontWeight: 'bold',
-    fontFamily: 'Rubik, Medium',
+    fontFamily: 'Rubik-Medium',
   },
   loginButton: {
-    backgroundColor: '#007ea7',
-    padding: 14,
+    backgroundColor: '#0391B5',
+    padding: 18,
     marginTop: 20,
     alignItems: 'center',
-    borderRadius: 25,
-    // elevation: 3,
+    borderRadius: 32,
+    height: 55,
+    shadowColor: "#000000",
+   shadowOffset: {
+    width: 0,
+    height: 3,
+    },
+    shadowOpacity:  0.17,
+    shadowRadius: 3.05,
+    //elevation: 4
+    
   },
   loginButtonText: {
     color: '#fff',
-    fontWeight: 'bold',
     fontSize: 15,
+    fontFamily: 'Rubik-SemiBold',
   },
   guestButton: {
     backgroundColor: '#FFFFFF',
-    padding: 14,
+    padding: 18,
     marginTop: 20,
     alignItems: 'center',
-    borderRadius: 25,
+    borderRadius: 32,
     // elevation: 4,
     borderWidth: 1,
     borderColor: '#D4D5D5',
+    height: 55,
   },
   guestButtonText: {
-    color: '#000000',
-    fontWeight: 'bold',
+    color: '#122025',
     fontSize: 15,
-    fontFamily: 'Rubik, Medium',
-  },
+    fontFamily: 'Rubik-SemiBold',
+   },
 });
 export default stylesLogin;
